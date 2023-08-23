@@ -9,6 +9,18 @@ import Foundation
  Each letter in magazine can only be used once in ransomNote.
 
  메거진에 있는 문자열만 이용하여 랜섬노트가 작성되어야 한다
+
+ Example 1:
+ Input: ransomNote = "a", magazine = "b"
+ Output: false
+
+ Example 2:
+ Input: ransomNote = "aa", magazine = "ab"
+ Output: false
+ 
+ Example 3:
+ Input: ransomNote = "aa", magazine = "aab"
+ Output: true
  */
 
 public final class RansomNote: NSObject {
