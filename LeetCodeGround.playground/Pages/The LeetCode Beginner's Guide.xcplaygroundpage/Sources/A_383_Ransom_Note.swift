@@ -17,21 +17,26 @@ import Foundation
  Example 2:
  Input: ransomNote = "aa", magazine = "ab"
  Output: false
- 
+
  Example 3:
  Input: ransomNote = "aa", magazine = "aab"
  Output: true
  */
 
 public final class RansomNote: NSObject {
-    public static func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
-        let ransomCharactors = Set(Array(ransomNote))
-        let magazinCharactors = Set(Array(magazine))
-        print(ransomCharactors)
+    public static func canConstruct(ransomNote: String, magazine: String) -> Bool {
+        // MARK: try1
+//        var ransomCharactors = Set(Array(ransomNote))
+//        let magazinCharactors = Set(Array(magazine))
+//        print(ransomCharactors)
+//
+////        let isContains =
+//        ransomCharactors.subtract(magazinCharactors)
+//        print(ransomCharactors.isEmpty) // isContains
+//
+//        return ransomCharactors.isEmpty
 
-        let isContains = ransomCharactors.subtracting(magazinCharactors).isEmpty
-        print(isContains)
-
-        return isContains
+        // MARK: try2
+        return magazine.contains(ransomNote)
     }
 }

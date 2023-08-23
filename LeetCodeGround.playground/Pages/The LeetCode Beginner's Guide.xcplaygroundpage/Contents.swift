@@ -1,4 +1,5 @@
 import Foundation
+import PlaygroundSupport
 
 // MARK: A 412. Fizz Buzz
 FizzBuzz.fizzBuzz(15)
@@ -13,4 +14,6 @@ let case1Node = MiddleOfTheLinkedList.middleNode(case1)
 dump(case1Node)
 
 // MARK: A 383. Ransom Note
-RansomNote.canConstruct("1234", "123")
+// ransomNote = "aa", magazine = "ab" -> false
+// ransomNote = "aa", magazine = "aab" -> true
+RansomNote.canConstruct(ransomNote: "aa", magazine: "ab")
