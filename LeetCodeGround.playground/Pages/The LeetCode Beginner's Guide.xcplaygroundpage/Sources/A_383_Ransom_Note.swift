@@ -37,6 +37,15 @@ public final class RansomNote: NSObject {
 //        return ransomCharactors.isEmpty
 
         // MARK: try2
-        return magazine.contains(ransomNote)
+        //
+        var ransomChars = Array(ransomNote)
+        var magazinChars = Array(magazine)
+        ransomChars.enumerated().forEach {
+            if let index = magazinChars.firstIndex(of: $0.element) {
+                magazinChars.remove(at: index)
+            }
+            ransomChars.remove(at: $0.offset)
+        }
+        return ransomChars.isEmpty
     }
 }
